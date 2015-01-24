@@ -1,0 +1,36 @@
+---
+title: "help"
+author: "Viacheslav Shybaiev"
+date: "January 25, 2015"
+output: html_document
+---
+
+## Introduction
+
+This data product is aimed to provide product usage indicators of a mobile
+application.
+
+The data product is created with Shiny framework of the RStudio and allows users
+to access data using a web browser from any location.
+
+Tracking the mobile app usage indicatiors is a viable process after the
+mobile appplication is launched for public availability.
+
+For the purpose of the course project the real application name and the data was obfuscated
+and cached from the database.
+
+## Reports
+
+The developed data product is a web application offering interactive reports on
+the mobile app product usage.
+
+The source data is stored in the database and was cached with the launch of the
+web application in the environment where database connection is available. 
+For the purpose of this assignment the data was cached and obfuscated because 
+this is a real mobile app and the data could not be disclosed publically.
+
+NOTE: Some combinations of the country/platform are not cached and user sees an error.
+In the real internal environment the data is feeded from the database when cache misses.
+
+All reports can be accessed using the main menu. Interactively users can select 
+country, platform and other parameters for the report.
