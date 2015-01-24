@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Statistics</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Product Statistics">
+  <meta name="author" content="Viacheslav Shybaiev">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Product Statistics</h1>
+    <h2>A course project on the Developing Data Products course</h2>
+    <p>Viacheslav Shybaiev<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Product Statistics Overview</h2>
+  </hgroup>
+  <article data-timings="">
+    <h1>Introduction</h1>
+
+<p>This data product is aimed to provide product usage indicators of a mobile
+application.</p>
+
+<p>The data product is created with Shiny framework of the RStudio and allows users
+to access data using a web browser from any location.</p>
+
+<p>Tracking the mobile app usage indicatiors is a viable process after the
+mobile appplication is launched for public availability.</p>
+
+<p>For the purpose of the course project the real application name and the data was obfuscated
+and cached from the database.</p>
+
+<p>Following slides highlight examples of the main interactive reports available with the
+shiny app.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Product Usage Indicators - Installs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Example of the Installs report. With the shiny app user can interact by selecting
+required number of months to include into the diagram.</p>
+
+<pre><code class="r">downloads=kpi_monthly_downloads (-1, 0, plot=TRUE, 1:6)
+</code></pre>
+
+<pre><code>## [1] &quot;## Getting data on  kpi_downloads_monthly&quot;
+## [1] &quot;./cache/kpi_downloads_monthly/kpi_downloads_monthly--1-0-0-0.csv&quot;
+## [1] &quot;data is cached in csv, reading  ./cache/kpi_downloads_monthly/kpi_downloads_monthly--1-0-0-0.csv&quot;
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Product Usage Indicators - Position</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Position analysis provides information about the product placement in the app stores.
+With the app user can select countries and platforms to get the report for.</p>
+
+<pre><code class="r">mydata = positions_analysis(285, 6) 
+</code></pre>
+
+<pre><code>## [1] &quot;## Getting data on  positions_analysis&quot;
+## [1] &quot;./cache/positions_analysis/positions_analysis-285-6-0-0.csv&quot;
+## [1] &quot;data is cached in csv, reading  ./cache/positions_analysis/positions_analysis-285-6-0-0.csv&quot;
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Product Usage Indicators - Cohort Analysis</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Cohort analysis provides information about the buckets of users of the product with 
+different start date when they first tried the product. This report can help to analyse
+the number of times of product usage month over month.</p>
+
+<p>With the app user can select countries and platforms to get the report for.</p>
+
+<pre><code class="r">mydata = cohort_analysis (315,3)
+</code></pre>
+
+<pre><code>## [1] &quot;## Getting data on  cohort_analysis&quot;
+## [1] &quot;./cache/cohort_analysis/cohort_analysis-315-3-0-0.csv&quot;
+## [1] &quot;data is cached in csv, reading  ./cache/cohort_analysis/cohort_analysis-315-3-0-0.csv&quot;
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Product Statistics Overview'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Product Usage Indicators - Installs'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Product Usage Indicators - Position'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Product Usage Indicators - Cohort Analysis'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

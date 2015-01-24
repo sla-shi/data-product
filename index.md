@@ -1,0 +1,89 @@
+---
+title       : Product Statistics
+subtitle    : A course project on the Developing Data Products course
+author      : Viacheslav Shybaiev
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+
+## Product Statistics Overview
+# Introduction
+
+This data product is aimed to provide product usage indicators of a mobile
+application.
+
+The data product is created with Shiny framework of the RStudio and allows users
+to access data using a web browser from any location.
+
+Tracking the mobile app usage indicatiors is a viable process after the
+mobile appplication is launched for public availability.
+
+For the purpose of the course project the real application name and the data was obfuscated
+and cached from the database.
+
+Following slides highlight examples of the main interactive reports available with the
+shiny app.
+
+---
+
+## Product Usage Indicators - Installs
+Example of the Installs report. With the shiny app user can interact by selecting
+required number of months to include into the diagram.
+
+```r
+downloads=kpi_monthly_downloads (-1, 0, plot=TRUE, 1:6)
+```
+
+```
+## [1] "## Getting data on  kpi_downloads_monthly"
+## [1] "./cache/kpi_downloads_monthly/kpi_downloads_monthly--1-0-0-0.csv"
+## [1] "data is cached in csv, reading  ./cache/kpi_downloads_monthly/kpi_downloads_monthly--1-0-0-0.csv"
+```
+
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
+
+---
+## Product Usage Indicators - Position
+Position analysis provides information about the product placement in the app stores.
+With the app user can select countries and platforms to get the report for.
+
+```r
+mydata = positions_analysis(285, 6) 
+```
+
+```
+## [1] "## Getting data on  positions_analysis"
+## [1] "./cache/positions_analysis/positions_analysis-285-6-0-0.csv"
+## [1] "data is cached in csv, reading  ./cache/positions_analysis/positions_analysis-285-6-0-0.csv"
+```
+
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
+
+---
+## Product Usage Indicators - Cohort Analysis
+Cohort analysis provides information about the buckets of users of the product with 
+different start date when they first tried the product. This report can help to analyse
+the number of times of product usage month over month.
+
+With the app user can select countries and platforms to get the report for.
+
+```r
+mydata = cohort_analysis (315,3)
+```
+
+```
+## [1] "## Getting data on  cohort_analysis"
+## [1] "./cache/cohort_analysis/cohort_analysis-315-3-0-0.csv"
+## [1] "data is cached in csv, reading  ./cache/cohort_analysis/cohort_analysis-315-3-0-0.csv"
+```
+
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
+
+
+
